@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Surat Karo — convert Karo Batak words from Latin script into Aksara Karo (Surat Sepuluh Siwah), the traditional Karo Batak script. A language-preservation tool."
+    />
+    <title>Surat Karo · Latin → Aksara Karo</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23a03123'/%3E%3Ctext x='50' y='72' font-size='64' text-anchor='middle' fill='%23f3ecdd' font-family='serif'%3E%E1%AF%82%3C/text%3E%3C/svg%3E" />
+    <style>
+      /* Bundled Batak font — no platform ships one; without this users see tofu.
+         Kept in index.html with a relative URL so it works on any deploy subpath. */
+      @font-face {
+        font-family: 'Noto Sans Batak';
+        src: url('fonts/NotoSansBatak.woff2') format('woff2');
+        font-display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="backdrop" aria-hidden="true">
+      <span class="drift drift-1">ᯘ</span>
+      <span class="drift drift-2">ᯂ</span>
+      <span class="drift drift-3">ᯔ</span>
+      <div class="grain"></div>
+    </div>
+
+    <header class="masthead reveal">
+      <div class="masthead-inner">
+        <div class="brand">
+          <p class="kicker">Surat Sepuluh Siwah · the nineteen letters</p>
+          <h1 class="title">
+            Surat<span class="title-accent">Karo</span>
+            <span class="title-batak" lang="btk">ᯘᯬᯒᯗ᯳&nbsp;ᯂᯒᯨ</span>
+          </h1>
+          <p class="tagline">
+            Write Karo Batak in its own script — a transliterator for
+            <em>Aksara Karo</em>, Unicode Batak block, rules validated against
+            Kozok's lessons &amp; Woollams (1996).
+          </p>
+        </div>
+        <nav class="nav" aria-label="Views">
+          <a href="#" class="nav-link" data-view="convert">Converter</a>
+          <a href="#about" class="nav-link" data-view="about">About the script</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="app">
+      <!-- ============================ converter view ============================ -->
+      <section id="view-convert" class="view">
+        <div class="sheet reveal" style="--d: 0.08s">
+          <div class="sheet-head">
+            <span class="sheet-label" id="mode-label">Latin → Aksara</span>
+            <div class="sheet-tools">
+              <button id="btn-eacute" class="tool-btn" title="Insert é (e-taling) at the cursor">
+                é <span class="tool-hint">insert taling</span>
+              </button>
+              <button id="btn-swap" class="tool-btn" title="Swap direction (Aksara → Latin)">
+                ⇅ <span class="tool-hint">swap</span>
+              </button>
+            </div>
+          </div>
+          <textarea
+            id="input"
+            class="input"
+            rows="2"
+            spellcheck="false"
+            autocapitalize="off"
+            autocomplete="off"
+            placeholder="mejuah-juah kita kerina"
+            aria-label="Karo Latin input"
+          ></textarea>
+          <p class="e-note" id="e-note">
+            Plain <b>e</b> is read as <b>pepet</b> ᯧ (schwa, as in
+            <i>emas</i>). If your word has the <b>taling</b> vowel ᯩ (as in
+            <i>énda</i>), write <b>é</b> — or tap the marked
+            <span class="e-demo">e</span> under any converted word to switch it.
+          </p>
+        </div>
+
+        <div class="outbox reveal" style="--d: 0.16s">
+          <div class="sheet-head">
+            <span class="sheet-label" id="out-label">Aksara Karo</span>
+            <div class="sheet-tools">
+              <button id="btn-copy" class="tool-btn" title="Copy Unicode text">⧉ <span class="tool-hint">copy</span></button>
+              <button id="btn-png" class="tool-btn" title="Export as PNG image">PNG</button>
+              <button id="btn-svg" class="tool-btn" title="Export as SVG">SVG</button>
+              <button id="btn-prefs" class="tool-btn" title="Display preferences" aria-expanded="false">✦ <span class="tool-hint">signs</span></button>
+            </div>
+          </div>
+
+          <div id="prefs" class="prefs" hidden>
+            <fieldset>
+              <legend>i-sign</legend>
+              <label><input type="radio" name="iSign" value="karo" checked /> <span lang="btk">ᯫ</span> strokes</label>
+              <label><input type="radio" name="iSign" value="circle" /> <span lang="btk">ᯪ</span> circle</label>
+            </fieldset>
+            <fieldset>
+              <legend>o-sign</legend>
+              <label><input type="radio" name="oSign" value="pakpak" checked /> <span lang="btk">ᯨ</span> primary</label>
+              <label><input type="radio" name="oSign" value="karo" /> <span lang="btk">ᯭ</span> karo-o</label>
+            </fieldset>
+            <fieldset>
+              <legend>vowel killer</legend>
+              <label><input type="radio" name="killer" value="panongonan" checked /> <span lang="btk">◌᯳</span> penengen</label>
+              <label><input type="radio" name="killer" value="pangolat" /> <span lang="btk">◌᯲</span> pangolat</label>
+            </fieldset>
+            <fieldset>
+              <legend>conventions</legend>
+              <label><input type="checkbox" name="glides" /> glide style — <i>tua</i> → <i>tuwa</i> <span lang="btk">ᯗᯬᯋ</span></label>
+              <label><input type="checkbox" name="medialUnit" /> medial <i>mb·nd</i> as unit letters <span lang="btk">ᯣ ᯢ</span></label>
+            </fieldset>
+          </div>
+
+          <div id="output" class="output" aria-live="polite"></div>
+          <div id="breakdown" class="breakdown" hidden></div>
+        </div>
+      </section>
+
+      <!-- ============================ about view ============================ -->
+      <section id="view-about" class="view" hidden></section>
+    </main>
+
+    <footer class="foot reveal" style="--d: 0.24s">
+      <p>
+        A transliterator, not a translator — it writes Karo words in their own
+        script; it does not turn other languages into Karo. Rules derived from
+        Uli Kozok's <i>Aksara Karo</i> lessons and Geoff Woollams,
+        <i>A Grammar of Karo Batak, Sumatra</i> (1996). Font: Noto Sans Batak
+        (SIL Open Font License).
+      </p>
+      <p class="font-check" title="Shaping check: the × sign must appear after the tall NA strokes, not before them">
+        font check <span lang="btk">ᯞᯬᯉ᯳</span> — the ᯬ belongs after the ᯉ
+      </p>
+    </footer>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

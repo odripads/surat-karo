@@ -1,0 +1,20 @@
+{
+  "name": "surat-karo",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Latin → Aksara Karo (Surat Sepuluh Siwah) transliterator. Language-preservation tool for the Karo Batak script.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "node --test src/lib/translit.test.ts src/lib/pipeline.test.ts"
+  },
+  "devDependencies": {
+    "@fontsource/gentium-book-plus": "^5.2.5",
+    "@fontsource/ibm-plex-mono": "^5.2.5",
+    "@types/node": "^26.1.1",
+    "typescript": "^5.6.0",
+    "vite": "^6.3.5"
+  }
+}
