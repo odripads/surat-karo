@@ -29,6 +29,12 @@ not a substitute for the spec.
 - Display preferences: i-sign ᯫ/ᯪ, o-sign ᯨ/ᯭ, killer ᯳/᯲, glide style
   (*tua*→*tuwa*), medial mb/nd unit-letter override.
 - Reverse direction (Aksara → Latin).
+- **Kamus mode (id→Karo)**: word-by-word dictionary lookup over the open
+  lexicon — Indonesian word in, Karo equivalent + Aksara out, with source
+  attribution per hit, prefix suggestions on misses, and explicit caveats
+  (word lookup, not sentence translation; `ᵉ` marks unverified e-readings).
+  The data layer is pluggable so a licensed dictionary can drop in without
+  code changes (`src/lib/kamus.ts`).
 - "About the script" page: the 19 induk surat, anak ni surat, and the two
   Unicode traps (letter named HA reads /ka/; vowel sign named O writes /u/).
 - Offline after first load (service worker); fully static, zero runtime deps.

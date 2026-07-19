@@ -9,6 +9,7 @@
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "skipLibCheck": true,
+    "resolveJsonModule": true,
     "types": ["node", "vite/client"],
     "forceConsistentCasingInFileNames": true
   },

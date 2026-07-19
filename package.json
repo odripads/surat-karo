@@ -3,12 +3,12 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Latin → Aksara Karo (Surat Sepuluh Siwah) transliterator. Language-preservation tool for the Karo Batak script.",
+  "description": "Latin \u2192 Aksara Karo (Surat Sepuluh Siwah) transliterator. Language-preservation tool for the Karo Batak script.",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "test": "node --test src/lib/translit.test.ts src/lib/pipeline.test.ts"
+    "test": "node --test src/lib/translit.test.ts src/lib/pipeline.test.ts src/lib/kamus.test.ts"
   },
   "devDependencies": {
     "@fontsource/gentium-book-plus": "^5.2.5",

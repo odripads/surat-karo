@@ -186,6 +186,73 @@ body {
 }
 .sheet-tools { display: flex; gap: 0.4rem; flex-wrap: wrap; }
 
+.mode-switch { display: flex; border: var(--frame); }
+.mode-btn {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: transparent;
+  border: 0;
+  color: var(--ink-soft);
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+.mode-btn + .mode-btn { border-left: var(--frame); }
+.mode-btn:hover { color: var(--red); }
+.mode-btn.active { background: var(--ink); color: var(--paper); }
+
+/* ---------------- kamus mode ---------------- */
+
+.kamus-out { display: flex; flex-direction: column; gap: 0.9rem; width: 100%; }
+.kamus-card {
+  border: var(--frame);
+  background: rgba(255, 252, 243, 0.85);
+  padding: 0.8rem 1rem;
+}
+.kamus-card.miss { opacity: 0.65; border-style: dashed; }
+.kamus-id {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  border-bottom: var(--frame);
+  padding-bottom: 0.35rem;
+  margin-bottom: 0.6rem;
+}
+.kamus-hit { display: flex; align-items: baseline; gap: 0.9rem; flex-wrap: wrap; padding: 0.25rem 0; }
+.kamus-karo { font-size: 1.25rem; font-weight: 700; }
+.kamus-karo sup { color: var(--gold); font-weight: 400; }
+.kamus-aksara { font-family: var(--batak); font-size: 2rem; line-height: 1.2; }
+.kamus-src { font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); letter-spacing: 0.05em; }
+.kamus-miss-note { font-size: 0.88rem; color: var(--ink-soft); font-style: italic; }
+.kamus-suggest { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.4rem; }
+.kamus-suggest button {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  border: var(--frame);
+  background: transparent;
+  color: var(--ink);
+  padding: 0.2rem 0.55rem;
+  cursor: pointer;
+}
+.kamus-suggest button:hover { background: var(--ink); color: var(--paper); }
+.kamus-caveats {
+  border-left: 3px solid var(--gold);
+  padding: 0.4rem 0 0.4rem 1rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+.kamus-caveats li { margin: 0.2rem 0 0.2rem 1rem; }
+.kamus-attrib {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.05em;
+}
+
 .tool-btn {
   font-family: var(--mono);
   font-size: 0.78rem;

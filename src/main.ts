@@ -8,7 +8,11 @@ import './style.css';
 import { convert, type Overrides, type WordPart, type Settings } from './lib/pipeline.ts';
 import { applyVariants, charInfo, reverse, type VariantPrefs } from './lib/translit.ts';
 import { exportPNG, exportSVG } from './lib/export.ts';
+import { fromOpenLexicon, lookupPhrase, suggest, caveats } from './lib/kamus.ts';
+import lexiconRaw from './data/lexicon.json';
 import { renderAbout } from './about.ts';
+
+const kamusData = fromOpenLexicon(lexiconRaw);
 
 // ------------------------------------------------------------------- state
 
@@ -47,7 +51,7 @@ const store = {
 };
 
 let prefs: Prefs = store.load('prefs', DEFAULT_PREFS);
-let mode: 'latin' | 'aksara' = 'latin';
+let mode: 'latin' | 'aksara' | 'kamus' = 'latin';
 const overrides: Overrides = new Map();
 let selectedId: string | null = null;
 let lastText = ''; // current full output (variants applied) for copy/export
@@ -59,7 +63,6 @@ const input = $<HTMLTextAreaElement>('#input');
 const output = $('#output');
 const breakdown = $('#breakdown');
 const prefsPanel = $('#prefs');
-const modeLabel = $('#mode-label');
 const outLabel = $('#out-label');
 const eNote = $('#e-note');
 
@@ -273,8 +276,84 @@ function renderAksaraMode(): void {
   output.appendChild(note);
 }
 
+function renderKamusMode(): void {
+  const text = input.value;
+  output.innerHTML = '';
+  breakdown.hidden = true;
+  if (!text.trim()) {
+    output.innerHTML = `<p class="output-empty">Ketik kata bahasa Indonesia — <i>makan</i> menjadi <b>man</b> <b lang="btk">ᯔᯉ᯳</b> <span class="kamus-attrib">(${kamusData.headwords} kata · ${kamusData.attribution})</span></p>`;
+    lastText = '';
+    return;
+  }
+  const tokens = lookupPhrase(kamusData, text);
+  const wrap = document.createElement('div');
+  wrap.className = 'kamus-out';
+  const copyParts: string[] = [];
+
+  for (const t of tokens) {
+    if (!t.isWord) continue;
+    const card = document.createElement('div');
+    if (t.entry) {
+      card.className = 'kamus-card';
+      card.innerHTML = `<div class="kamus-id">${t.raw}</div>`;
+      for (const h of t.entry.hits) {
+        const hit = document.createElement('div');
+        hit.className = 'kamus-hit';
+        const e = h.eAssumed ? '<sup title="ejaan e diasumsikan pepet — belum terverifikasi">ᵉ</sup>' : '';
+        const aks = h.aksara
+          ? `<span class="kamus-aksara" lang="btk">${display(h.aksara)}</span>`
+          : '<span class="kamus-miss-note">tidak dapat ditulis beraksara</span>';
+        hit.innerHTML = `<span class="kamus-karo">${h.karo}${e}</span>${aks}<span class="kamus-src">${h.src.join(' · ')}${h.page ? ` · hlm. ${h.page}` : ''}</span>`;
+        card.appendChild(hit);
+        if (h.aksara) copyParts.push(`${h.karo} ${display(h.aksara)}`);
+      }
+    } else {
+      card.className = 'kamus-card miss';
+      card.innerHTML = `<div class="kamus-id">${t.raw}</div><p class="kamus-miss-note">tidak ada di kamus (${kamusData.headwords} kata)</p>`;
+      const sugg = suggest(kamusData, t.raw);
+      if (sugg.length) {
+        const row = document.createElement('div');
+        row.className = 'kamus-suggest';
+        for (const s of sugg) {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.textContent = s;
+          b.addEventListener('click', () => {
+            input.value = input.value.replace(t.raw, s);
+            store.save('text', input.value);
+            render();
+          });
+          row.appendChild(b);
+        }
+        card.appendChild(row);
+      }
+    }
+    wrap.appendChild(card);
+  }
+
+  const notes = caveats(tokens);
+  if (notes.length) {
+    const ul = document.createElement('ul');
+    ul.className = 'kamus-caveats';
+    for (const n of notes) {
+      const li = document.createElement('li');
+      li.textContent = n;
+      ul.appendChild(li);
+    }
+    wrap.appendChild(ul);
+  }
+  const attrib = document.createElement('p');
+  attrib.className = 'kamus-attrib';
+  attrib.textContent = `Sumber: ${kamusData.attribution}`;
+  wrap.appendChild(attrib);
+
+  output.appendChild(wrap);
+  lastText = copyParts.join('\n');
+}
+
 function render(): void {
   if (mode === 'latin') renderLatinMode();
+  else if (mode === 'kamus') renderKamusMode();
   else renderAksaraMode();
   autogrow();
 }
@@ -315,23 +394,37 @@ input.addEventListener('keydown', (evt) => {
 
 // ------------------------------------------------------------------- mode
 
-$('#btn-swap').addEventListener('click', () => {
-  mode = mode === 'latin' ? 'aksara' : 'latin';
-  const latinMode = mode === 'latin';
-  modeLabel.textContent = latinMode ? 'Latin → Aksara' : 'Aksara → Latin';
-  outLabel.textContent = latinMode ? 'Aksara Karo' : 'Latin';
-  input.placeholder = latinMode ? 'mejuah-juah kita kerina' : 'ᯔᯧᯐᯬᯀᯱ-ᯐᯬᯀᯱ';
-  input.classList.toggle('input-batak', !latinMode);
-  input.style.fontFamily = latinMode ? '' : "'Noto Sans Batak', serif";
-  eNote.hidden = !latinMode;
-  $<HTMLButtonElement>('#btn-eacute').hidden = !latinMode;
-  $<HTMLButtonElement>('#btn-png').hidden = !latinMode;
-  $<HTMLButtonElement>('#btn-svg').hidden = !latinMode;
-  $<HTMLButtonElement>('#btn-prefs').hidden = !latinMode;
+type Mode = 'latin' | 'aksara' | 'kamus';
+const PLACEHOLDER: Record<Mode, string> = {
+  latin: 'mejuah-juah kita kerina',
+  kamus: 'selamat datang makan',
+  aksara: 'ᯔᯧᯐᯬᯀᯱ-ᯐᯬᯀᯱ',
+};
+
+function setMode(m: Mode): void {
+  mode = m;
+  for (const b of document.querySelectorAll<HTMLButtonElement>('.mode-btn')) {
+    const on = b.dataset.mode === m;
+    b.classList.toggle('active', on);
+    b.setAttribute('aria-selected', String(on));
+  }
+  outLabel.textContent = m === 'aksara' ? 'Latin' : m === 'kamus' ? 'Bahasa Karo + Aksara' : 'Aksara Karo';
+  input.placeholder = PLACEHOLDER[m];
+  input.style.fontFamily = m === 'aksara' ? "'Noto Sans Batak', serif" : '';
+  eNote.hidden = m !== 'latin';
+  $<HTMLElement>('#kamus-note').hidden = m !== 'kamus';
+  $<HTMLButtonElement>('#btn-eacute').hidden = m !== 'latin';
+  $<HTMLButtonElement>('#btn-png').hidden = m !== 'latin';
+  $<HTMLButtonElement>('#btn-svg').hidden = m !== 'latin';
+  $<HTMLButtonElement>('#btn-prefs').hidden = m !== 'latin';
   prefsPanel.hidden = true;
   input.value = '';
   render();
-});
+}
+
+for (const b of document.querySelectorAll<HTMLButtonElement>('.mode-btn')) {
+  b.addEventListener('click', () => setMode(b.dataset.mode as Mode));
+}
 
 // ------------------------------------------------------------ copy/export
 

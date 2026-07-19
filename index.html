@@ -53,13 +53,14 @@
       <section id="view-convert" class="view">
         <div class="sheet reveal" style="--d: 0.08s">
           <div class="sheet-head">
-            <span class="sheet-label" id="mode-label">Latin → Aksara</span>
+            <div class="mode-switch" role="tablist" aria-label="Mode">
+              <button class="mode-btn active" data-mode="latin" role="tab" aria-selected="true">Tulis Aksara</button>
+              <button class="mode-btn" data-mode="kamus" role="tab" aria-selected="false">Kamus id→Karo</button>
+              <button class="mode-btn" data-mode="aksara" role="tab" aria-selected="false">Baca Aksara</button>
+            </div>
             <div class="sheet-tools">
               <button id="btn-eacute" class="tool-btn" title="Insert é (e-taling) at the cursor">
                 é <span class="tool-hint">insert taling</span>
-              </button>
-              <button id="btn-swap" class="tool-btn" title="Swap direction (Aksara → Latin)">
-                ⇅ <span class="tool-hint">swap</span>
               </button>
             </div>
           </div>
@@ -78,6 +79,11 @@
             <i>emas</i>). If your word has the <b>taling</b> vowel ᯩ (as in
             <i>énda</i>), write <b>é</b> — or tap the marked
             <span class="e-demo">e</span> under any converted word to switch it.
+          </p>
+          <p class="e-note" id="kamus-note" hidden>
+            Ketik kata <b>bahasa Indonesia</b> — kamus mencari padanan
+            <b>bahasa Karo</b>-nya, lalu menuliskannya dalam Aksara Karo.
+            Ini <b>kamus kata per kata</b>, bukan penerjemah kalimat.
           </p>
         </div>
 
