@@ -42,6 +42,20 @@ test('multi-word Indonesian headwords resolve', () => {
   assert.ok(e && e.hits.some((h) => h.karo === 'bujur'));
 });
 
+test('phrase lookup matches multi-word headwords greedily', () => {
+  const toks = lookupPhrase(kamus, 'terima kasih makan');
+  const words = toks.filter((t) => t.isWord);
+  assert.equal(words.length, 2, 'terima kasih must fuse into one token');
+  assert.ok(words[0].entry!.hits.some((h) => h.karo === 'bujur'));
+  assert.ok(words[1].entry!.hits.some((h) => h.karo === 'man'));
+});
+
+test('greedy match does not fuse across punctuation', () => {
+  const toks = lookupPhrase(kamus, 'terima, kasih');
+  assert.equal(toks.filter((t) => t.isWord).length, 2);
+  assert.equal(toks.filter((t) => t.isWord && t.entry).length, 0);
+});
+
 test('phrase lookup keeps punctuation and marks misses', () => {
   const toks = lookupPhrase(kamus, 'makan, kuantum!');
   assert.equal(toks.filter((t) => t.isWord).length, 2);

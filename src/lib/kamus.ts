@@ -131,15 +131,34 @@ export interface Token {
 }
 
 /** Split a phrase and look each word up. Deliberately word-by-word — see the
- *  module note and `caveats()`. */
+ *  module note and `caveats()`. Multi-word headwords ("terima kasih") are
+ *  matched greedily: a two-word window is tried before each single word. */
 export function lookupPhrase(data: KamusData, text: string): Token[] {
-  const out: Token[] = [];
   const re = /[a-zA-ZéèêÉÈÊ]+/g;
+  const words: { raw: string; index: number }[] = [];
+  for (const m of text.matchAll(re)) words.push({ raw: m[0], index: m.index! });
+
+  const out: Token[] = [];
   let last = 0;
-  for (const m of text.matchAll(re)) {
-    if (m.index! > last) out.push({ raw: text.slice(last, m.index!), entry: null, isWord: false });
-    out.push({ raw: m[0], entry: lookup(data, m[0]), isWord: true });
-    last = m.index! + m[0].length;
+  let i = 0;
+  while (i < words.length) {
+    const w = words[i];
+    if (w.index > last) out.push({ raw: text.slice(last, w.index), entry: null, isWord: false });
+    // greedy: try "this next" as one headword when only whitespace separates
+    const next = words[i + 1];
+    if (next && /^\s+$/.test(text.slice(w.index + w.raw.length, next.index))) {
+      const pair = `${w.raw} ${next.raw}`;
+      const hit = lookup(data, pair);
+      if (hit) {
+        out.push({ raw: text.slice(w.index, next.index + next.raw.length), entry: hit, isWord: true });
+        last = next.index + next.raw.length;
+        i += 2;
+        continue;
+      }
+    }
+    out.push({ raw: w.raw, entry: lookup(data, w.raw), isWord: true });
+    last = w.index + w.raw.length;
+    i += 1;
   }
   if (last < text.length) out.push({ raw: text.slice(last), entry: null, isWord: false });
   return out;
