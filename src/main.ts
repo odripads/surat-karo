@@ -8,7 +8,7 @@ import './style.css';
 import { convert, type Overrides, type WordPart, type Settings } from './lib/pipeline.ts';
 import { applyVariants, charInfo, reverse, type VariantPrefs } from './lib/translit.ts';
 import { exportPNG, exportSVG } from './lib/export.ts';
-import { fromOpenLexicon, lookupPhrase, suggest, caveats } from './lib/kamus.ts';
+import { fromOpenLexicon, lookupPhrase, suggest, caveats, affixHint } from './lib/kamus.ts';
 import lexiconRaw from './data/lexicon.json';
 import { renderAbout } from './about.ts';
 
@@ -295,7 +295,10 @@ function renderKamusMode(): void {
     const card = document.createElement('div');
     if (t.entry) {
       card.className = 'kamus-card';
-      card.innerHTML = `<div class="kamus-id">${t.raw}</div>`;
+      const via = t.entry.via
+        ? ` <span class="kamus-via">← kata dasar <b>${t.entry.via.stem}</b>${t.entry.via.prefix ? ` (${t.entry.via.prefix})` : ''}${t.entry.via.suffix ? ` (${t.entry.via.suffix})` : ''}</span>`
+        : '';
+      card.innerHTML = `<div class="kamus-id">${t.raw}${via}</div>`;
       for (const h of t.entry.hits) {
         const hit = document.createElement('div');
         hit.className = 'kamus-hit';
@@ -306,6 +309,15 @@ function renderKamusMode(): void {
         hit.innerHTML = `<span class="kamus-karo">${h.karo}${e}</span>${aks}<span class="kamus-src">${h.src.join(' · ')}${h.page ? ` · hlm. ${h.page}` : ''}</span>`;
         card.appendChild(hit);
         if (h.aksara) copyParts.push(`${h.karo} ${display(h.aksara)}`);
+      }
+      if (t.entry.via) {
+        const hint = affixHint(t.entry.via);
+        if (hint) {
+          const p = document.createElement('p');
+          p.className = 'kamus-affix-hint';
+          p.textContent = hint;
+          card.appendChild(p);
+        }
       }
     } else {
       card.className = 'kamus-card miss';

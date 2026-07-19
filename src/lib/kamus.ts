@@ -109,6 +109,102 @@ export function lookup(data: KamusData, word: string): KamusEntry | null {
   return hits ? { indonesian: q, hits } : null;
 }
 
+// ------------------------------------------------------- morphology (id)
+
+/* Indonesian affix stripping as CANDIDATE GENERATION only: a stripped stem
+ * counts solely when the dictionary confirms it, so no guessing. The Karo
+ * equivalents shown for stripped affixes come from Woollams (1996) ch. 3 and
+ * are informational hints, not auto-conjugation — the app must not fabricate
+ * inflected Karo words it cannot verify. */
+export interface Morph {
+  stem: string;
+  prefix?: string;
+  suffix?: string;
+}
+
+/** Indonesian affix → Karo counterpart, per Woollams 1996 ch. 3. */
+export const AFFIX_KARO: Record<string, string> = {
+  'di-': 'i-',
+  'ber-': 'er-',
+  'ter-': 'ter-',
+  'me-': 'awalan sengau N-',
+  'se-': 'se-',
+  '-kan': '-ken',
+  '-an': '-en',
+  '-nya': '-na',
+  '-ku': '-ku',
+  '-mu': '-ndu',
+};
+
+const SUFFIXES: [string, string][] = [
+  ['lah', ''], ['kah', ''], // discourse particles: strip silently
+  ['nya', '-nya'], ['kan', '-kan'], ['ku', '-ku'], ['mu', '-mu'], ['an', '-an'], ['i', ''],
+];
+
+function stemCandidates(word: string): Morph[] {
+  const out: Morph[] = [];
+  const seen = new Set<string>();
+  const push = (stem: string, prefix?: string, suffix?: string) => {
+    if (stem.length >= 3 && !seen.has(stem + '|' + prefix + '|' + suffix)) {
+      seen.add(stem + '|' + prefix + '|' + suffix);
+      out.push({ stem, prefix, suffix });
+    }
+  };
+  const bases: Morph[] = [{ stem: word }];
+  for (const [suf, label] of SUFFIXES) {
+    if (word.endsWith(suf)) bases.push({ stem: word.slice(0, -suf.length), suffix: label || undefined });
+  }
+  for (const b of bases) {
+    const w = b.stem;
+    push(w, undefined, b.suffix);
+    if (w.startsWith('di')) push(w.slice(2), 'di-', b.suffix);
+    if (w.startsWith('ber')) push(w.slice(3), 'ber-', b.suffix);
+    if (w.startsWith('be')) push(w.slice(2), 'ber-', b.suffix);
+    if (w.startsWith('ter')) push(w.slice(3), 'ter-', b.suffix);
+    if (w.startsWith('se')) push(w.slice(2), 'se-', b.suffix);
+    if (w.startsWith('ke')) push(w.slice(2), undefined, b.suffix);
+    // meN- with nasal restoration: memakan→makan, menulis→tulis, memukul→pukul…
+    if (w.startsWith('meng')) { push(w.slice(4), 'me-', b.suffix); push('k' + w.slice(4), 'me-', b.suffix); }
+    if (w.startsWith('meny')) push('s' + w.slice(4), 'me-', b.suffix);
+    if (w.startsWith('mem')) { push(w.slice(3), 'me-', b.suffix); push('p' + w.slice(3), 'me-', b.suffix); }
+    if (w.startsWith('men')) { push(w.slice(3), 'me-', b.suffix); push('t' + w.slice(3), 'me-', b.suffix); }
+    if (w.startsWith('me')) push(w.slice(2), 'me-', b.suffix);
+    if (w.startsWith('pe')) push(w.slice(2), undefined, b.suffix);
+  }
+  return out;
+}
+
+export interface StemmedEntry extends KamusEntry {
+  via?: Morph;
+}
+
+/** Lookup with morphology fallback: exact first, then validated stems.
+ *  When several stripped stems exist in the dictionary (memakan → makan but
+ *  also mem-|akan), the LONGEST stem wins — it preserves the most of the
+ *  original word and is the linguistically likelier segmentation. */
+export function lookupSmart(data: KamusData, word: string): StemmedEntry | null {
+  const q = normalize(word);
+  const direct = lookup(data, q);
+  if (direct) return direct;
+  let best: StemmedEntry | null = null;
+  for (const m of stemCandidates(q)) {
+    if (m.stem === q) continue;
+    const hit = lookup(data, m.stem);
+    if (hit && (!best || m.stem.length > best.via!.stem.length)) {
+      best = { ...hit, via: m };
+    }
+  }
+  return best;
+}
+
+/** Human-readable hint for a stripped affix, or null. */
+export function affixHint(m: Morph): string | null {
+  const parts: string[] = [];
+  if (m.prefix && AFFIX_KARO[m.prefix]) parts.push(`${m.prefix} ≈ Karo ${AFFIX_KARO[m.prefix]}`);
+  if (m.suffix && AFFIX_KARO[m.suffix]) parts.push(`${m.suffix} ≈ Karo ${AFFIX_KARO[m.suffix]}`);
+  return parts.length ? parts.join(' · ') + ' (Woollams 1996, bab 3)' : null;
+}
+
 /** Words in the lexicon that start with the query — for suggestions. */
 export function suggest(data: KamusData, prefix: string, limit = 8): string[] {
   const q = normalize(prefix);
@@ -126,7 +222,7 @@ export function suggest(data: KamusData, prefix: string, limit = 8): string[] {
 export interface Token {
   raw: string;
   /** null for punctuation/whitespace passthrough */
-  entry: KamusEntry | null;
+  entry: StemmedEntry | null;
   isWord: boolean;
 }
 
@@ -156,7 +252,7 @@ export function lookupPhrase(data: KamusData, text: string): Token[] {
         continue;
       }
     }
-    out.push({ raw: w.raw, entry: lookup(data, w.raw), isWord: true });
+    out.push({ raw: w.raw, entry: lookupSmart(data, w.raw), isWord: true });
     last = w.index + w.raw.length;
     i += 1;
   }
@@ -192,6 +288,13 @@ export function caveats(tokens: Token[]): string[] {
   }
   if (found.some((t) => t.entry!.hits.length > 1)) {
     out.push('Beberapa kata punya lebih dari satu padanan — pilih sesuai konteks.');
+  }
+  if (found.some((t) => t.entry!.via)) {
+    out.push(
+      'Kata berimbuhan dicari lewat kata dasarnya; padanan Karo yang tampil ' +
+        'adalah bentuk dasar. Petunjuk imbuhan Karo hanyalah perkiraan — ' +
+        'bentuk jadian yang benar perlu penutur.',
+    );
   }
   return out;
 }

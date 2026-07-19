@@ -228,6 +228,15 @@ body {
 .kamus-aksara { font-family: var(--batak); font-size: 2rem; line-height: 1.2; }
 .kamus-src { font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); letter-spacing: 0.05em; }
 .kamus-miss-note { font-size: 0.88rem; color: var(--ink-soft); font-style: italic; }
+.kamus-via { font-family: var(--serif); font-size: 0.82rem; letter-spacing: 0; text-transform: none; color: var(--ink-soft); }
+.kamus-affix-hint {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  color: var(--gold);
+  border-top: 1px dashed var(--rule-soft);
+  margin-top: 0.4rem;
+  padding-top: 0.35rem;
+}
 .kamus-suggest { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.4rem; }
 .kamus-suggest button {
   font-family: var(--mono);
