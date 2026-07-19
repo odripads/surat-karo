@@ -8,11 +8,12 @@ import './style.css';
 import { convert, type Overrides, type WordPart, type Settings } from './lib/pipeline.ts';
 import { applyVariants, charInfo, reverse, type VariantPrefs } from './lib/translit.ts';
 import { exportPNG, exportSVG } from './lib/export.ts';
-import { fromOpenLexicon, lookupPhrase, suggest, caveats, affixHint } from './lib/kamus.ts';
+import { fromOpenLexicon, fromLicensed, mergeKamus, lookupPhrase, suggest, caveats, affixHint } from './lib/kamus.ts';
 import lexiconRaw from './data/lexicon.json';
+import kamus2001Raw from './data/kamus-2001.json';
 import { renderAbout } from './about.ts';
 
-const kamusData = fromOpenLexicon(lexiconRaw);
+const kamusData = mergeKamus(fromLicensed(kamus2001Raw), fromOpenLexicon(lexiconRaw));
 
 // ------------------------------------------------------------------- state
 
@@ -358,6 +359,13 @@ function renderKamusMode(): void {
   attrib.className = 'kamus-attrib';
   attrib.textContent = `Sumber: ${kamusData.attribution}`;
   wrap.appendChild(attrib);
+  const rights = document.createElement('p');
+  rights.className = 'kamus-attrib';
+  rights.textContent =
+    'Data Kamus 2001 dimanfaatkan nirlaba untuk pendidikan & penelitian dengan atribusi penuh ' +
+    '(Pasal 44 UU 28/2014); permohonan izin resmi kepada Danareksa/Balai Pustaka dan Badan Bahasa ' +
+    'sedang berproses. Keberatan: kalcerinstitute@gmail.com — dihormati pada hari yang sama.';
+  wrap.appendChild(rights);
 
   output.appendChild(wrap);
   lastText = copyParts.join('\n');

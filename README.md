@@ -57,6 +57,19 @@ spec §8, compared after variant-sign normalization. All must stay green.
 `base: './'` makes all paths relative). Noto Sans Batak (SIL OFL) is bundled;
 no platform ships a Batak font, so the app never relies on system fonts.
 
+## Rights basis for the Kamus 2001 data
+
+`src/data/kamus-2001.json` is the **factual layer** (Indonesian↔Karo word
+equivalences + Aksara + page citations) derived from *Kamus Bahasa
+Karo–Indonesia* (Siregar dkk. 2001, Pusat Bahasa/Balai Pustaka; out of print).
+It is used non-commercially for education and research with full per-entry
+attribution under **Pasal 44 UU 28/2014**, with the written support of
+co-compiler Matius Cikappen Sembiring, and with a formal licensing request
+in process to PT Danareksa (holding of PT Balai Pustaka) and Badan Bahasa.
+The original gloss prose and example sentences are **not** published here.
+Objections from the rights holder are honored same-day:
+kalcerinstitute@gmail.com.
+
 ## Lexicon (kamus groundwork)
 
 `src/data/lexicon.json` is a growing Indonesian → Karo word lexicon

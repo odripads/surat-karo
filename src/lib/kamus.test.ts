@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
   fromOpenLexicon,
+  fromLicensed,
+  mergeKamus,
   lookupSmart,
   affixHint,
   lookup,
@@ -126,4 +128,16 @@ test('morphology: exact match wins over stemming', () => {
 test('caveats: stem-based hits add the bentuk-dasar warning', () => {
   const c = caveats(lookupPhrase(kamus, 'dimakan'));
   assert.ok(c.some((s) => s.includes('kata dasarnya')), c.join(' | '));
+});
+
+test('licensed kamus-2001 layer: rumah resolves to jabu with page citation', () => {
+  const raw2001 = JSON.parse(readFileSync(new URL('../data/kamus-2001.json', import.meta.url), 'utf8'));
+  const merged = mergeKamus(fromLicensed(raw2001), kamus);
+  assert.ok(merged.headwords > 3500, `${merged.headwords}`);
+  const e = lookup(merged, 'rumah');
+  assert.ok(e && e.hits.some((h) => h.karo === 'jabu' && h.aksara === 'ᯐᯆᯬ' && h.page === 74));
+  const anak = lookup(merged, 'anak');
+  assert.ok(anak && anak.hits.length > 0);
+  // open-lexicon fallback survives the merge
+  assert.ok(lookup(merged, 'terima kasih'));
 });

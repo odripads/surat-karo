@@ -109,6 +109,19 @@ export function lookup(data: KamusData, word: string): KamusEntry | null {
   return hits ? { indonesian: q, hits } : null;
 }
 
+/** Merge two datasets. `primary` wins per headword; `secondary` fills gaps.
+ *  Used to layer the licensed kamus over the open lexicon. */
+export function mergeKamus(primary: KamusData, secondary: KamusData): KamusData {
+  const entries = new Map(secondary.entries);
+  for (const [k, v] of primary.entries) entries.set(k, v);
+  return {
+    label: `${primary.label} + ${secondary.label}`,
+    attribution: `${primary.attribution} · ${secondary.attribution}`,
+    headwords: entries.size,
+    entries,
+  };
+}
+
 // ------------------------------------------------------- morphology (id)
 
 /* Indonesian affix stripping as CANDIDATE GENERATION only: a stripped stem
