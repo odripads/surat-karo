@@ -4,6 +4,11 @@ Latin → **Aksara Karo** (Surat Sepuluh Siwah) transliterator. A
 language-preservation web app: type a Karo Batak word, see, copy, and export
 its correct traditional spelling in the Unicode Batak block (U+1BC0–U+1BFF).
 
+**Try it live: [odripads.github.io/surat-karo](https://odripads.github.io/surat-karo/)** —
+featured as a Kalcer Experiment on
+[kalcerinstitute.com](https://kalcerinstitute.com), the website of the Kalcer
+Institute (Yogyakarta).
+
 Rule system: [`AKSARA_KARO_SPEC.md`](AKSARA_KARO_SPEC.md) — derived from Uli
 Kozok's *Aksara Karo* lessons and Woollams (1996) *A Grammar of Karo Batak,
 Sumatra*, validated against all 27 attested spellings in the lessons. Read it
@@ -45,6 +50,17 @@ spec §8, compared after variant-sign normalization. All must stay green.
 `npm run build`, then host `dist/` anywhere static (GitHub Pages, Netlify —
 `base: './'` makes all paths relative). Noto Sans Batak (SIL OFL) is bundled;
 no platform ships a Batak font, so the app never relies on system fonts.
+
+## Lexicon (kamus groundwork)
+
+`src/data/lexicon.json` is a growing Indonesian → Karo word lexicon
+(~300 headwords) compiled by `scripts/build_lexicon.py` from openly licensed
+and attributed sources: the id.wiktionary *Kamus bahasa Indonesia – bahasa
+Karo* appendix (CC BY-SA, after Bangun et al. 1999), id.wiktionary Karo
+entries, two detik.com Sumut vocabulary lists, and a curated set of common
+words kept **only** when auto-attested in Woollams (1996). Every entry carries
+its source tags. This will power a word-by-word kamus mode — dictionary
+lookup, not grammatical translation.
 
 ## Contributing
 

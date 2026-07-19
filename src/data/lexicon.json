@@ -1,0 +1,2805 @@
+{
+ "built": "2026-07-19",
+ "sources": {
+  "wikt-lampiran": "id.wiktionary Lampiran: Kamus bahasa Indonesia – bahasa Karo (CC BY-SA; after Bangun et al. 1999, Kata Tugas Bahasa Karo)",
+  "wikt-btx": "id.wiktionary, Kategori: Kata bahasa Karo (CC BY-SA)",
+  "detik-100": "detik.com Sumut, '100 Kosakata Bahasa Karo dengan Artinya' (2024)",
+  "detik-60": "detik.com Sumut, '60 Kosakata Bahasa Karo Lengkap Dengan Artinya' (2023)"
+ },
+ "pairs": [
+  {
+   "id": "acap",
+   "karo": [
+    "usur"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "adapun",
+   "karo": [
+    "litpe"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "agak",
+   "karo": [
+    "bagi"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "ah",
+   "karo": [
+    "oh"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "air",
+   "karo": [
+    "lau"
+   ],
+   "src": [
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "air mata",
+   "karo": [
+    "iluh"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "akan",
+   "karo": [
+    "atena"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "akhirnya",
+   "karo": [
+    "dungna"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "akibat",
+   "karo": [
+    "perbahanen"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "alangkah",
+   "karo": [
+    "sengkal"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "amat",
+   "karo": [
+    "kal"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "andai",
+   "karo": [
+    "bicara"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "angkat",
+   "karo": [
+    "angkip"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "anjing",
+   "karo": [
+    "biang"
+   ],
+   "src": [
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "antara",
+   "karo": [
+    "kelang"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "apa",
+   "karo": [
+    "kai"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "apalagi",
+   "karo": [
+    "kainari"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "atas",
+   "karo": [
+    "datas"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "atau",
+   "karo": [
+    "entah"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "ayo",
+   "karo": [
+    "ota",
+    "eta"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "bagaimana",
+   "karo": [
+    "uga"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "bahwa",
+   "karo": [
+    "maka"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "baik",
+   "karo": [
+    "mehuli"
+   ],
+   "src": [
+    "detik-100",
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "bangkit",
+   "karo": [
+    "keke"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "bangun",
+   "karo": [
+    "keke"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "banyak",
+   "karo": [
+    "mbue",
+    "melala",
+    "lala"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60",
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "bapak",
+   "karo": [
+    "bapa"
+   ],
+   "src": [
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "barangkali",
+   "karo": [
+    "bancijadi",
+    "mon-mon"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "baru",
+   "karo": [
+    "mbaru"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "bawa",
+   "karo": [
+    "baba"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "beberapa",
+   "karo": [
+    "piga-piga"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "begitu",
+   "karo": [
+    "bagah",
+    "bage"
+   ],
+   "src": [
+    "detik-60",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "bekas",
+   "karo": [
+    "bekas"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "belakang",
+   "karo": [
+    "pudi"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "belum",
+   "karo": [
+    "lenga"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "benar",
+   "karo": [
+    "payo"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "benar-benar",
+   "karo": [
+    "tuhu-tuhu"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "berapa",
+   "karo": [
+    "asakai"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "berbaring",
+   "karo": [
+    "langkem"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "berjalan",
+   "karo": [
+    "erdalen"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "bersinar",
+   "karo": [
+    "nala"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "besar",
+   "karo": [
+    "mbelin"
+   ],
+   "src": [
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "besok",
+   "karo": [
+    "pagi"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "biasa",
+   "karo": [
+    "biasa"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "bicara",
+   "karo": [
+    "ngerana"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "bila",
+   "karo": [
+    "katawari"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "bisa",
+   "karo": [
+    "banci"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "buat",
+   "karo": [
+    "man"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "bukan",
+   "karo": [
+    "labo"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "cabe",
+   "karo": [
+    "cina"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "cantik",
+   "karo": [
+    "mejile"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "cepat",
+   "karo": [
+    "pedas"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "cermin",
+   "karo": [
+    "cormin"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "cocok",
+   "karo": [
+    "hawa"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "cucu",
+   "karo": [
+    "kempu"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "cuma",
+   "karo": [
+    "cuma"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "curang",
+   "karo": [
+    "calus"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "dahulu",
+   "karo": [
+    "mbarenda"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "dalam",
+   "karo": [
+    "mbagas",
+    "bas",
+    "bagas"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "dan",
+   "karo": [
+    "ras"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "dan kawan-kawan",
+   "karo": [
+    "ras teman-teman"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "dapat",
+   "karo": [
+    "dat"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "dari",
+   "karo": [
+    "nari"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "daripada",
+   "karo": [
+    "asangken"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "datang",
+   "karo": [
+    "reh"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "daun",
+   "karo": [
+    "bulung"
+   ],
+   "src": [
+    "detik-100",
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "delapan",
+   "karo": [
+    "waluh"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "demikian",
+   "karo": [
+    "bagem"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "dengan",
+   "karo": [
+    "ras"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "di",
+   "karo": [
+    "ija",
+    "i"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "di mana",
+   "karo": [
+    "ija"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "dua",
+   "karo": [
+    "dua"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "duduk",
+   "karo": [
+    "kundul"
+   ],
+   "src": [
+    "detik-100",
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "dulu",
+   "karo": [
+    "lebe"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "duluan",
+   "karo": [
+    "leben"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "empat",
+   "karo": [
+    "empat"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "enam",
+   "karo": [
+    "enem"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "entah",
+   "karo": [
+    "bancijadi",
+    "mon-mon",
+    "entah"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "garam",
+   "karo": [
+    "sira"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "garuk",
+   "karo": [
+    "gergou"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "geli",
+   "karo": [
+    "gamang"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "gendong",
+   "karo": [
+    "angkip"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "gergaji",
+   "karo": [
+    "gaji"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "gila",
+   "karo": [
+    "hado"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "gunung",
+   "karo": [
+    "deleng"
+   ],
+   "src": [
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "halus",
+   "karo": [
+    "alus"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "hampir",
+   "karo": [
+    "menam"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "hanya",
+   "karo": [
+    "saja",
+    "kenca"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "harapan",
+   "karo": [
+    "arap"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "harga",
+   "karo": [
+    "herga"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "hari",
+   "karo": [
+    "wari"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "harus",
+   "karo": [
+    "labancilang"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "hati-hati",
+   "karo": [
+    "metenget"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "haus",
+   "karo": [
+    "muas"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "hidup",
+   "karo": [
+    "geluh"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "hitam",
+   "karo": [
+    "mbiring"
+   ],
+   "src": [
+    "detik-100",
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "hujan",
+   "karo": [
+    "udan"
+   ],
+   "src": [
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "ibu",
+   "karo": [
+    "nande"
+   ],
+   "src": [
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "indah",
+   "karo": [
+    "mejile"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "ingin",
+   "karo": [
+    "merhat"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "ini",
+   "karo": [
+    "enda",
+    "edi"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "itu",
+   "karo": [
+    "adah",
+    "ena"
+   ],
+   "src": [
+    "detik-60",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "iya",
+   "karo": [
+    "ue"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "jadi",
+   "karo": [
+    "surung"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "jalan",
+   "karo": [
+    "dalan"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "jangan",
+   "karo": [
+    "ula"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "janji",
+   "karo": [
+    "pudun"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "jarang",
+   "karo": [
+    "merak"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "jatuh",
+   "karo": [
+    "ndabuh"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "jauh",
+   "karo": [
+    "ndauh"
+   ],
+   "src": [
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "jelek",
+   "karo": [
+    "mejin"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "jika",
+   "karo": [
+    "adi"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "jongkok",
+   "karo": [
+    "suksuk"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "juga",
+   "karo": [
+    "pe"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "jujur",
+   "karo": [
+    "jolos"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "kadang-kadang",
+   "karo": [
+    "mon-mon"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "kalau",
+   "karo": [
+    "adi"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "kampung",
+   "karo": [
+    "kuta"
+   ],
+   "src": [
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "kamu",
+   "karo": [
+    "kam"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "kapan",
+   "karo": [
+    "ndigan"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "karena",
+   "karo": [
+    "perbahan",
+    "erdandanken"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "ke",
+   "karo": [
+    "ku"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "kebun",
+   "karo": [
+    "barong"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "kecil",
+   "karo": [
+    "kitik"
+   ],
+   "src": [
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "kedua",
+   "karo": [
+    "peduaken"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "kemari",
+   "karo": [
+    "mari",
+    "ariko"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "kemarin",
+   "karo": [
+    "nderbih"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "kembali",
+   "karo": [
+    "mulih"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "kemudian",
+   "karo": [
+    "jenari",
+    "enca"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "kenapa",
+   "karo": [
+    "engkai"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "kencur",
+   "karo": [
+    "keciwer"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "kepada",
+   "karo": [
+    "kepada",
+    "kempak"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "ketika",
+   "karo": [
+    "sangana"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "kini",
+   "karo": [
+    "genduari"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "kopi",
+   "karo": [
+    "kahua"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "kuat",
+   "karo": [
+    "meteguh",
+    "matoguh"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "kunci",
+   "karo": [
+    "eruk"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "kurang",
+   "karo": [
+    "kurang"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "ladang",
+   "karo": [
+    "juma"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "lagi",
+   "karo": [
+    "tole"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "lagi pula",
+   "karo": [
+    "tole pe"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "lain",
+   "karo": [
+    "deba"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "lama",
+   "karo": [
+    "ndekah"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "lambat",
+   "karo": [
+    "melance"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "lantaran",
+   "karo": [
+    "perbahan",
+    "erkiteken"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "lapar",
+   "karo": [
+    "melihe"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "lari",
+   "karo": [
+    "kiam"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "laut",
+   "karo": [
+    "lawit"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "lebih",
+   "karo": [
+    "lebih"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "lepas",
+   "karo": [
+    "malpung"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "lihat",
+   "karo": [
+    "idah"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "lima",
+   "karo": [
+    "lima"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "luar biasa",
+   "karo": [
+    "gandil"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "lubuk",
+   "karo": [
+    "namo"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "lumbung ; translate",
+   "karo": [
+    "keben"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "lusa",
+   "karo": [
+    "kedun"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "makan",
+   "karo": [
+    "man"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "makin",
+   "karo": [
+    "reh"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "malam",
+   "karo": [
+    "berngi"
+   ],
+   "src": [
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "mana",
+   "karo": [
+    "apai",
+    "ja"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "mandi",
+   "karo": [
+    "ridi"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "marah",
+   "karo": [
+    "merawa"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "mari",
+   "karo": [
+    "mari",
+    "ariko"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "masih",
+   "karo": [
+    "sanga"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "masing-masing",
+   "karo": [
+    "tep-tep"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "mata",
+   "karo": [
+    "mata"
+   ],
+   "src": [
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "mati",
+   "karo": [
+    "mate"
+   ],
+   "src": [
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "mau",
+   "karo": [
+    "atena",
+    "merhat"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "memang",
+   "karo": [
+    "tuhu"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "membeli",
+   "karo": [
+    "nukur"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "menangis",
+   "karo": [
+    "ngandung"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "mencuci",
+   "karo": [
+    "nuci"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "mengapa",
+   "karo": [
+    "engkai"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "mengenai",
+   "karo": [
+    "tentang"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "merah",
+   "karo": [
+    "megara"
+   ],
+   "src": [
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "meskipun",
+   "karo": [
+    "aminna"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "mimpi",
+   "karo": [
+    "nipi"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "minum",
+   "karo": [
+    "minem"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "mula-mula",
+   "karo": [
+    "mula-mula"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "mulai",
+   "karo": [
+    "benai"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "mungkin",
+   "karo": [
+    "bancijadi"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "mustahil",
+   "karo": [
+    "latuhu"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "nama",
+   "karo": [
+    "gelar"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60",
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "nanti",
+   "karo": [
+    "kari"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "nasi",
+   "karo": [
+    "nakan"
+   ],
+   "src": [
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "nenas",
+   "karo": [
+    "kenas"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "niat",
+   "karo": [
+    "kahul"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "nyanyi",
+   "karo": [
+    "ende"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "orang",
+   "karo": [
+    "kalak"
+   ],
+   "src": [
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "pada",
+   "karo": [
+    "bas"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "padi",
+   "karo": [
+    "page"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "pagi",
+   "karo": [
+    "pagi"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "pakai",
+   "karo": [
+    "pake"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "paling",
+   "karo": [
+    "si"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "panas",
+   "karo": [
+    "melas"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "panggil",
+   "karo": [
+    "dilo"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "pangku",
+   "karo": [
+    "angkip"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "pantas",
+   "karo": [
+    "jambar"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "pasti",
+   "karo": [
+    "tentu"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "pegang",
+   "karo": [
+    "jemak"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "peluk",
+   "karo": [
+    "dakep"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "perantara",
+   "karo": [
+    "kelang-kelang"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "pergi",
+   "karo": [
+    "lawes"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "perlu",
+   "karo": [
+    "sikel"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "permulaan",
+   "karo": [
+    "pemulan"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "pernah",
+   "karo": [
+    "pernah"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "pesan",
+   "karo": [
+    "tenah"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "pintar",
+   "karo": [
+    "pentar"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "pisah",
+   "karo": [
+    "sirang"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "pula",
+   "karo": [
+    "pe"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "pulang",
+   "karo": [
+    "mulih"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "pulau",
+   "karo": [
+    "pulo"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "pun",
+   "karo": [
+    "pe"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "putih",
+   "karo": [
+    "mentar",
+    "mbentar"
+   ],
+   "src": [
+    "detik-100",
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "rata",
+   "karo": [
+    "rencim"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "rindu",
+   "karo": [
+    "tedeh"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "ringan",
+   "karo": [
+    "nahang"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "saja",
+   "karo": [
+    "saja"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sama",
+   "karo": [
+    "bali"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sama dengan",
+   "karo": [
+    "bali ras",
+    "seri ras"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sambil",
+   "karo": [
+    "janah"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sangat",
+   "karo": [
+    "kal"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "satu",
+   "karo": [
+    "sada"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "sayang",
+   "karo": [
+    "keleng"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "sayap",
+   "karo": [
+    "kabeng"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "sebab",
+   "karo": [
+    "sebab",
+    "perbahan"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sebagai",
+   "karo": [
+    "bagi"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sebagian",
+   "karo": [
+    "sebagin"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sebelah",
+   "karo": [
+    "sembeka",
+    "sembelah"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sebelum",
+   "karo": [
+    "ope"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sedang",
+   "karo": [
+    "sanga"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sedikit",
+   "karo": [
+    "sitek"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "segala",
+   "karo": [
+    "kerina"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "segera",
+   "karo": [
+    "mis"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sejak",
+   "karo": [
+    "tangtangna",
+    "mulai"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sekali",
+   "karo": [
+    "sekali"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sekarang",
+   "karo": [
+    "sendah"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sekonyong-konyong",
+   "karo": [
+    "rempet-rempet"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "selalu",
+   "karo": [
+    "usur",
+    "lalap"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "selamanya",
+   "karo": [
+    "sedekahna"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "seluruh",
+   "karo": [
+    "kerina"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sembilan",
+   "karo": [
+    "siwah"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "semua",
+   "karo": [
+    "kerina"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sendiri",
+   "karo": [
+    "sisada"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "seperti",
+   "karo": [
+    "bagi",
+    "ndesken"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sepuluh",
+   "karo": [
+    "sepuluh"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "sering",
+   "karo": [
+    "usur"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sesudah",
+   "karo": [
+    "enggo",
+    "dung"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sesudah itu",
+   "karo": [
+    "jenari"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "setengah",
+   "karo": [
+    "sembeka",
+    "sembelah"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "setiap",
+   "karo": [
+    "tep-tep"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sewaktu-waktu",
+   "karo": [
+    "maun-maun"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "si",
+   "karo": [
+    "si"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "siang",
+   "karo": [
+    "suari"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "siapa",
+   "karo": [
+    "ise"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sini",
+   "karo": [
+    "jenda"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "sisa",
+   "karo": [
+    "iba"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "sudah",
+   "karo": [
+    "enggo",
+    "dung"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "suka",
+   "karo": [
+    "ngena"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "sulit",
+   "karo": [
+    "tahat"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "sunguh-sungguh",
+   "karo": [
+    "tuhu-tuhu"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "sunyi",
+   "karo": [
+    "angko"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "supaya",
+   "karo": [
+    "maka",
+    "gelah"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "tadi",
+   "karo": [
+    "ndai"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "takut",
+   "karo": [
+    "mbiar"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "tambah",
+   "karo": [
+    "tambah"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "tampaknya",
+   "karo": [
+    "idahna",
+    "tatapen"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "telan",
+   "karo": [
+    "belgek"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "telur",
+   "karo": [
+    "pira"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "tempat",
+   "karo": [
+    "ingan"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "tempayan",
+   "karo": [
+    "tempayan"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "tentang",
+   "karo": [
+    "tentang"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "tentu",
+   "karo": [
+    "pasti"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "terbang",
+   "karo": [
+    "kabang"
+   ],
+   "src": [
+    "wikt-btx"
+   ]
+  },
+  {
+   "id": "terhadap",
+   "karo": [
+    "man",
+    "kempak"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "terima kasih",
+   "karo": [
+    "bujur"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "terlalu",
+   "karo": [
+    "kal"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "terus",
+   "karo": [
+    "terus"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "tetapi",
+   "karo": [
+    "tapi"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "tiap",
+   "karo": [
+    "tep"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "tiap-tiap",
+   "karo": [
+    "tep-tep"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "tiba-tiba",
+   "karo": [
+    "rempet-rempet"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "tidak",
+   "karo": [
+    "lang",
+    "labo"
+   ],
+   "src": [
+    "detik-100",
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "tidak ada",
+   "karo": [
+    "lalit"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "tidak pernah",
+   "karo": [
+    "lapernah"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "tidur",
+   "karo": [
+    "tunduh",
+    "medem"
+   ],
+   "src": [
+    "detik-100",
+    "woollams-1996"
+   ]
+  },
+  {
+   "id": "tiga",
+   "karo": [
+    "telu",
+    "telo"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "tikar",
+   "karo": [
+    "amak"
+   ],
+   "src": [
+    "detik-60"
+   ]
+  },
+  {
+   "id": "tingkah",
+   "karo": [
+    "ulah"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "tujuh",
+   "karo": [
+    "pitu"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "tumpah",
+   "karo": [
+    "mambur"
+   ],
+   "src": [
+    "detik-100"
+   ]
+  },
+  {
+   "id": "tuntas",
+   "karo": [
+    "dung"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "umpama",
+   "karo": [
+    "umpama"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "untuk",
+   "karo": [
+    "man"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "usir",
+   "karo": [
+    "gurba"
+   ],
+   "src": [
+    "detik-100",
+    "detik-60"
+   ]
+  },
+  {
+   "id": "waktu",
+   "karo": [
+    "paksa"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "walaupun",
+   "karo": [
+    "sekalipe"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "yang",
+   "karo": [
+    "si"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  },
+  {
+   "id": "yang mana",
+   "karo": [
+    "siapai"
+   ],
+   "src": [
+    "wikt-lampiran"
+   ]
+  }
+ ]
+}
